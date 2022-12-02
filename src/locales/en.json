@@ -1,0 +1,17 @@
+{
+    "info_about_question": "Info about the question",
+    "answer_question": "Answer",
+    "show_results": "Show results",
+    "previous_question": "Previous question",
+    "next_question": "Next question",
+    "give_feedback": "Give feedback about the question",
+    "submit_feedback": "Send feedback",
+    "feedback_thank_you": "Thank you. Message was sent.",
+    "scores": "Scores",
+    "answer_feedback": "Feedback",
+    "recommendations": "Recommendations",
+    "question": "Question",
+    "your_answers": "Your answer",
+    "restart": "Restart",
+    "download_report": "Download report"
+}

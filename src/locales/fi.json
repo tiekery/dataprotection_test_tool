@@ -1,0 +1,17 @@
+{
+    "info_about_question": "Lisätietoja kysymyksestä",
+    "answer_question": "Vastaa",
+    "show_results": "Näytä tulokset",
+    "previous_question": "Edellinen kysymys",
+    "next_question": "Seuraava kysymys",
+    "give_feedback": "Anna palautetta kysymyksestä",
+    "submit_feedback": "Lähetä palaute",
+    "feedback_thank_you": "Kiitos. Palaute lähetetty",
+    "scores": "Pisteesi",
+    "answer_feedback": "Palaute",
+    "recommendations": "Suositellut toimenpiteet",
+    "question": "Kysymys",
+    "your_answers": "Vastauksesi",
+    "restart": "Aloita alusta",
+    "download_report": "Lataa raportti"
+}
