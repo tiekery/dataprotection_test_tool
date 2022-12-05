@@ -1,0 +1,25 @@
+{
+  "name": "tiekequiz",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vite build --base=/wp-content/plugins/tietosuoja-kysely/dist/",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "pdfmake": "^0.2.4",
+    "pinia": "^2.0.0",
+    "vue": "^3.2.6",
+    "vue-i18n": "^9.1.9",
+    "vue3-quill": "^0.2.6"
+  },
+  "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^3.3.1",
+    "@vitejs/plugin-vue": "^1.6.1",
+    "@vue/compiler-sfc": "^3.2.6",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "vite": "^2.5.4"
+  }
+}
