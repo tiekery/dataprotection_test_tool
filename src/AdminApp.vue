@@ -1,30 +1,7 @@
 <script setup>
     import {reactive, ref, computed} from 'vue'
-    import { quillEditor, Quill } from 'vue3-quill'
+    import Editor from '@/components/editor.vue'
     const showDevTools = ref(false);
-
-    // Quilljs options
-    const state = reactive({
-        content: '',
-        _content: '',
-        editorOption: {
-            placeholder: 'core',
-            modules: {
-                toolbar: [
-                    ['bold', 'italic', 'underline'],
-                    [{ list: 'ordered' }, { list: 'bullet' }],
-                    [{ header: [ 2, 3, 4, false] }],
-                    [{ align: [] }],
-                    ['clean'],
-                    ['link', 'image']
-                ]
-            // other moudle options here
-            // otherMoudle: {}
-            },
-            // more options
-        },
-        disabled: false
-    })
 
     const isVisible = ref(false);
 
@@ -33,7 +10,6 @@
 
     function showDetails(index) {
         if(toggler_info.value.includes(index)){
-            console.log('löytyy ' + index)
             toggler_info.value = toggler_info.value.filter(function(item) {
                 return item !== index
             })
@@ -44,7 +20,6 @@
 
     function isOpen(index){
         if(toggler_info.value.includes(index)){
-            console.log('löytyy ' + index)
             return true;
         }
     }
@@ -180,7 +155,6 @@
 
 </script>
 <template>
-
     <div style="margin-bottom: 20px;">
         <div style="display:flex">
                 <label style="width: 20%" for="">Name of the survey: </label>
@@ -218,7 +192,8 @@
             <div style="display: flex; border-bottom: solid 1px #CCC; padding-bottom: 20px;">
                 <div style="width: 20%;"> Feedback: </div>
                 <div style="width: 80%;">
-                    <quill-editor  v-model:value="quizDataUpdate.scoring[key].scoreText" :options="state.editorOption" :disabled="state.disabled"></quill-editor>
+                    <editor v-model="quizDataUpdate.scoring[key].scoreText" />
+
                     <br>
                     <div v-for="(linkrow, rowkey) in row.scoreTextLinks" :key="rowkey">
                         <label for="">Buttons link: </label> <input type="text" v-model="linkrow.scoreTextLink" placeholder="https://urladdress.fi">
@@ -275,7 +250,7 @@
                 <div>
                     <label class="questionLabel">"Question info" box text </label>
                 </div>
-                <quill-editor  v-model:value="row.guideText" :options="state.editorOption" :disabled="state.disabled"></quill-editor>
+                <editor v-model="row.guideText" />
             </div>
 
             <p> <label>Feedback is shown after answer </label> <input type="checkbox" v-model="row.showSelectionText"></p>
@@ -300,11 +275,11 @@
                     <div class="two-columns">
                         <div class="editor-column">
                             <label class="questionLabel">Answers feedback:</label>
-                            <quill-editor  v-model:value="item.selectedText" :options="state.editorOption" :disabled="state.disabled"></quill-editor>
+                            <editor v-model="item.selectedText" />
                         </div>
                         <div class="editor-column">
                             <label class="questionLabel">Answers actions:</label>
-                            <quill-editor  v-model:value="item.selectedActions" :options="state.editorOption" :disabled="state.disabled"></quill-editor>
+                            <editor v-model="item.selectedActions" />
                         </div>
                     </div>
 
@@ -313,7 +288,6 @@
                     <a class="button button-primary button-large" href="#" @click.prevent="addQuestionOptionRow(index)">Add row</a>
                 </div>
             </div>
-
 
         </div>
         </transition>
@@ -388,4 +362,27 @@
     .fade-enter-from, .fade-leave-to {
         opacity: 0;
     }
+
+    .tiptapButtons button {
+        font-size: inherit;
+        font-family: inherit;
+        color: #000;
+        margin: 0.1rem;
+        border: 1px solid black;
+        border-radius: 0.3rem;
+        padding: 5px 3px;
+        background: white;
+        accent-color: black;
+    }
+    .tiptapButtons button.is-active {
+        background: black;
+        color: #fff;
+    }
+    .tiptapEditor ul{
+        margin-left: 1rem;
+    }
+    .tiptapEditor li{
+        list-style: disc;
+    }
+
 </style>
