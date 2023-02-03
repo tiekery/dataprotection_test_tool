@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Tietosuojakysely -työkalu
+ * Plugin Name:       Data protection survey tool
  * Plugin URI:        https://tietosuojaapkyrityksille.fi
- * Description:       Työkalu tietosuojaan liittyvien kyselyiden luomiseen
- * Version:           1.4.7
+ * Description:       Wordpress plugin for creating data protection surveys
+ * Version:           1.5.0
  * Author:            Iasy
  * Author URI:        http://iasy.fi
  * License:           GPL-2.0+
@@ -19,7 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 define('PLUGIN_URL', plugin_dir_url(__FILE__));
 define('PLUGIN_PATH', plugin_dir_path(__FILE__));
-define('PLUGIN_VERSION', '1.4.7');
+define('PLUGIN_VERSION', '1.5.0');
 include "includes/class-iasyquiz.php";
 include "includes/class-quiz-settings.php";
 include "includes/class-localization-helpers.php";
