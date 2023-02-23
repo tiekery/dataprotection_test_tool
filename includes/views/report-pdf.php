@@ -10,17 +10,18 @@
     </tr>
 </table>
 
+<!-- add your locos or text you want to show in pdf-report -->
 <?=$report?>
 <table style="width: 100%; margin-top: 40px;">
     <tr>
         <td width="33%">
-            <img class="-ml-2 lg:-ml-6" src="<?php echo PLUGIN_PATH; ?>/dist/pdf_footer_logo1.jpg" alt="" style="width: 150px;">
+            <!-- <img class="-ml-2 lg:-ml-6" src="<?php echo PLUGIN_PATH; ?>/dist/pdf_footer_logo1.jpg" alt="" style="width: 150px;"> -->
         </td>
         <td width="33%" style="text-align:center;">
-            <img class="-ml-2 lg:-ml-6" src="<?php echo PLUGIN_PATH; ?>/dist/pdf_footer_logo2.jpg" alt="" style="width: 180px;">
+            <!-- <img class="-ml-2 lg:-ml-6" src="<?php echo PLUGIN_PATH; ?>/dist/pdf_footer_logo2.jpg" alt="" style="width: 180px;"> -->
         </td>
         <td width="33%" style="text-align:right;">
-            <img class="-ml-2 lg:-ml-6" src="<?php echo PLUGIN_PATH; ?>/dist/pdf_footer_logo3.jpg" alt="" style="width: 80px;">
+            <!-- <img class="-ml-2 lg:-ml-6" src="<?php echo PLUGIN_PATH; ?>/dist/pdf_footer_logo3.jpg" alt="" style="width: 80px;"> -->
         </td>
     </tr>
     <tr>
